@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 from .metadata.confmetadata import *
 from .routers.inicio import router_inicio
+from .routers.predecir import router_predecir
 
 # Funcion para crear la app
 def crearApp():
@@ -13,5 +14,6 @@ def crearApp():
 				license_info=LICENCIA)
 
 	app.include_router(router_inicio)
+	app.include_router(router_predecir)
 
 	return app
